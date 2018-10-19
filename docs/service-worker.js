@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "./docs/precache-manifest.ffe20db9d6746b38b1903a437d95a3b8.js"
+  "/fuxingZhang/ReactScrollTabBar/precache-manifest.012e84f2dba7a24882e5be32ff9d5315.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("./docs/index.html", {
+workbox.routing.registerNavigationRoute("/fuxingZhang/ReactScrollTabBar/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
