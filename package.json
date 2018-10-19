@@ -2,7 +2,7 @@
   "name": "scrolltarbar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./demo/#",
+  "homepage": "./demo/",
   "dependencies": {
     "antd": "^3.10.1",
     "react": "^16.5.2",
