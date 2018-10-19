@@ -10,6 +10,10 @@
 > yarn  
 > yarn start  
 
+## DEMO  
+
+> [demo](https://fuxingzhang.github.io/ReactScrollTabBar/)
+
 ## 效果图
 
 ![demo img](https://github.com/fuxingZhang/ReactScrollTabBar/blob/master/screenShoots/screenshoot.jpg)
