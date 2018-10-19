@@ -12,7 +12,7 @@
 
 ## 效果图
 
-![demo img](/screenShoots/screenShoot.jpg)
+![demo img](https://github.com/fuxingZhang/ReactScrollTabBar/blob/master/screenShoots/screenshoot.jpg)
 
 ## 引入antd库是仅仅是为了用里面的图标  
 更高的复用性还需要再改进一下代码  
