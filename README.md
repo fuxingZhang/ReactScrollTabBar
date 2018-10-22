@@ -11,7 +11,7 @@
 > yarn start  
 
 ## DEMO  
-
+PC上查看效果必须切换到手机模式
 > [demo](https://fuxingzhang.github.io/ReactScrollTabBar/)
 
 ## 效果图
