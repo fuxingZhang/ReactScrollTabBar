@@ -26,29 +26,6 @@ PC上查看效果必须切换到手机模式
 import React, { Component } from 'react';
 import { Icon } from 'antd';
 
-const bottomButtonWrapStyle = {
-  position: 'relative',
-  backgroundColor: '#fff',
-  borderTop: '1px solid #ccc',
-  borderBottom: '1px solid #ccc'
-};
-
-const bottomButtonStyle = {
-  position: 'relative',
-  width: '80%',
-  margin: '0 10%',
-  textAlign: 'center',
-  height: 60,
-  fontSize: 40
-};
-
-const iconBoxStyle = {
-  position: 'absolute',
-  width: '20%',
-  height: '60px',
-  lineHeight: '60px',
-}
-
 class BottomButton extends Component {
   constructor(props) {
     super(props);
@@ -151,6 +128,29 @@ class BottomButton extends Component {
   }
 
   render() {
+    const bottomButtonWrapStyle = {
+      position: 'relative',
+      backgroundColor: '#fff',
+      borderTop: '1px solid #ccc',
+      borderBottom: '1px solid #ccc'
+    };
+
+    const bottomButtonStyle = {
+      position: 'relative',
+      width: '80%',
+      margin: '0 10%',
+      textAlign: 'center',
+      height: 60,
+      fontSize: 40
+    };
+
+    const iconBoxStyle = {
+      position: 'absolute',
+      width: '20%',
+      height: '60px',
+      lineHeight: '60px',
+    }
+
     return (
       <div
         onTouchStart={this.touchStart}
@@ -187,29 +187,6 @@ export default BottomButton
 ``` 
 import React, { Component } from 'react';
 import { Icon } from 'antd';
-
-const bottomButtonWrapStyle = {
-  position: 'relative',
-  backgroundColor: '#fff',
-  borderTop: '1px solid #ccc',
-  borderBottom: '1px solid #ccc'
-};
-
-const bottomButtonStyle = {
-  position: 'relative',
-  width: '80%',
-  margin: '0 10%',
-  textAlign: 'center',
-  height: 60,
-  fontSize: 40
-};
-
-const iconBoxStyle = {
-  position: 'absolute',
-  width: '20%',
-  height: '60px',
-  lineHeight: '60px',
-}
 
 class BottomButton extends Component {
   constructor(props) {
@@ -335,6 +312,29 @@ class BottomButton extends Component {
   }
 
   render() {
+  const bottomButtonWrapStyle = {
+    position: 'relative',
+    backgroundColor: '#fff',
+    borderTop: '1px solid #ccc',
+    borderBottom: '1px solid #ccc'
+  };
+
+  const bottomButtonStyle = {
+    position: 'relative',
+    width: '80%',
+    margin: '0 10%',
+    textAlign: 'center',
+    height: 60,
+    fontSize: 40
+  };
+
+  const iconBoxStyle = {
+    position: 'absolute',
+    width: '20%',
+    height: '60px',
+    lineHeight: '60px',
+  }
+
     return (
       <div
         onTouchStart={this.touchStart}
@@ -373,28 +373,6 @@ export default BottomButton
 ```  
 import React, { Component } from 'react';
 import { Icon } from 'antd';
-
-const bottomButtonWrapStyle = {
-  position: 'relative',
-  backgroundColor: '#fff',
-  borderTop: '1px solid #ccc',
-  borderBottom: '1px solid #ccc'
-};
-
-const bottomButtonStyle = {
-  position: 'relative',
-  width: '80%',
-  margin: '0 10%',
-  textAlign: 'center',
-  height: 60,
-};
-
-const iconBoxStyle = {
-  position: 'absolute',
-  width: '20%',
-  height: '60px',
-  lineHeight: '60px',
-}
 
 class BottomButton extends Component {
   constructor(props) {
@@ -499,6 +477,28 @@ class BottomButton extends Component {
   }
 
   render() {
+    const bottomButtonWrapStyle = {
+      position: 'relative',
+      backgroundColor: '#fff',
+      borderTop: '1px solid #ccc',
+      borderBottom: '1px solid #ccc'
+    };
+
+    const bottomButtonStyle = {
+      position: 'relative',
+      width: '80%',
+      margin: '0 10%',
+      textAlign: 'center',
+      height: 60,
+    };
+
+    const iconBoxStyle = {
+      position: 'absolute',
+      width: '20%',
+      height: '60px',
+      lineHeight: '60px',
+    }
+
     return (
       <div
         onTouchStart={this.touchStart}
