@@ -94,8 +94,10 @@ window.removeEventListener("scroll", this.onScroll);
 
 ## DEMO  
 PC上查看效果必须切换到手机模式
-> [demo](https://fuxingzhang.github.io/ReactScrollTabBar/)
-> [demo-UpgradedVersion](https://fuxingzhang.github.io/ReactScrollTabBar/UpgradedVersion/)
+第一版  
+> [demo](https://fuxingzhang.github.io/ReactScrollTabBar/)  
+升级版  
+> [demo-UpgradedVersion](https://fuxingzhang.github.io/ReactScrollTabBar/UpgradedVersion/)  
 
 ## 效果图
 
