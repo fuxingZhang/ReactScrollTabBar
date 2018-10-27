@@ -93,7 +93,7 @@ window.removeEventListener("scroll", this.onScroll);
 > yarn start  
 
 ## DEMO  
-PC上查看效果必须切换到**<font color=#0099ff face="黑体">手机模式</font>**  
+PC上查看效果必须切换到<font color=#0099ff>手机模式</font>****  
 
 第一版  
 > [demo](https://fuxingzhang.github.io/ReactScrollTabBar/)  
