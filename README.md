@@ -5,6 +5,88 @@
 
 灵感来源于iPhone input type == date 的效果  
 
+## 提出要求  
+
+* 水平滚动菜单时不允许垂直滚动、不允许有负面效果  
+```  
+touchStart = e => {
+  document.querySelector('html').style.touchAction = 'none';
+  window.addEventListener('touchmove', this.preventDefault, { passive: false }, false);
+  window.removeEventListener("scroll", this.props.onScroll);
+  e.stopPropagation();
+  e.nativeEvent.stopImmediatePropagation(); 
+}
+...  
+touchEnd = e => {
+  document.querySelector('html').style.touchAction = 'auto';
+  window.removeEventListener('touchmove', this.preventDefault, false);
+  e.stopPropagation();
+  e.nativeEvent.stopImmediatePropagation(); 
+}
+...  
+const bottomButtonWrapStyle = {
+  touchAction: 'pan-x'
+};
+```  
+
+* 水平滚动菜单时不允许选中字体、图片等体验较差的问题，但正常情况下允许选中和复制 
+解决： 1、通过CSS禁用该页面选中； 2、通过JS，判定在水平菜单touchstart的时候，禁用该页面选中；
+```  
+.list div,.list a,.list ul,.list li,.list i,.list svg,.list img{
+    -webkit-touch-callout:none; 
+    -webkit-user-select:none; 
+    -moz-user-select:none;
+    -ms-user-select:none; 
+    user-select:none;
+}  
+```  
+
+* 向上滑动和向下滑动显示不同菜单（必须兼容IOS的橡皮弹，也就是IOS的反弹的效果） 
+```  
+this.top = () => Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+...
+
+this.now = this.top();
+if(this.now >= this.max - 100 || this.now <= 0) return;
+```  
+
+* 同时兼容安卓和IOS  
+兼容性问题：
+```  
+document.documentElement.scrollTop, document.body.scrollTop
+document.documentElement.scrollHeight, document.body.scrollHeight
+document.documentElement.clientHeight, document.body.clientHeight   
+```  
+
+* 考虑流畅性、性能问题  
+
+```  
+touchStart = e => {
+  window.addEventListener("scroll", this.onScroll, false);
+}
+...  
+
+if(this.now !== this.start) {
+  window.removeEventListener("scroll", this.onScroll);
+  setTimeout( () => {
+    window.addEventListener("scroll", this.onScroll, false);
+    this.start = this.top();
+  }, 300)
+}
+...  
+touchEnd() {
+  window.removeEventListener("scroll", this.onScroll);
+}
+```  
+
+* 解决 touchmove 不灵敏的问题  
+
+```  
+window.removeEventListener("scroll", this.onScroll);
+```  
+
+*
+
 ## 运行  
 > git clone https://github.com/fuxingZhang/ReactScrollTabBar.git   
 > yarn  
@@ -13,6 +95,7 @@
 ## DEMO  
 PC上查看效果必须切换到手机模式
 > [demo](https://fuxingzhang.github.io/ReactScrollTabBar/)
+> [demo-UpgradedVersion](https://fuxingzhang.github.io/ReactScrollTabBar/UpgradedVersion/)
 
 ## 效果图
 
