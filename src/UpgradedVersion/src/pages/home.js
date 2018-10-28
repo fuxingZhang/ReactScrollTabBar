@@ -19,36 +19,41 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.max = Math.max(document.documentElement.scrollHeight - document.documentElement.clientHeight, document.body.scrollHeight - document.body.clientHeight)
+    window.addEventListener("scroll", this.onScroll, false);
   }
 
-  top = () => Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+  getTop = () => Math.max(document.documentElement.scrollTop, document.body.scrollTop)
 
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.onScroll);
-  // }
+  getMax = () => Math.max(document.documentElement.scrollHeight - document.documentElement.clientHeight, document.body.scrollHeight - document.body.clientHeight)
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
 
   onScroll = () => {
-    this.now = this.top();
-    if(this.now >= this.max - 100 || this.now <= 20) return;
+    this.now = this.getTop();
+    this.max = this.getMax();
+    console.log('---',this.now,this.max)
+    if(this.now >= this.max - 100 || this.now <= 0) return;
+    console.log(this.now + ',' + this.start)
 
     if(this.now !== this.start) {
       window.removeEventListener("scroll", this.onScroll);
       setTimeout( () => {
         window.addEventListener("scroll", this.onScroll, false);
-        this.start = this.top();
+        this.start = this.getTop();
       }, 300)
     }
 
     if(this.now < this.start) {
       this.setState({
-        bottom1: 40,
+        bottom1: 20,
         bottom2: -80
       })
     } else {
       this.setState({
         bottom1: -80,
-        bottom2: 40
+        bottom2: 20
       })
     }
   }

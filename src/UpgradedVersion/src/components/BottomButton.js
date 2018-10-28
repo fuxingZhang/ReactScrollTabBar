@@ -65,7 +65,7 @@ class BottomButton extends Component {
     window.removeEventListener('touchmove', this.preventDefault, false);
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation(); 
-    // window.addEventListener("scroll", this.props.onScroll);
+    window.addEventListener("scroll", this.props.onScroll);
 
     if (e.changedTouches.length > 1) {
       return
