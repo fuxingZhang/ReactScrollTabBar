@@ -93,7 +93,7 @@ window.removeEventListener("scroll", this.onScroll);
 > yarn start  
 
 ## DEMO  
-PC上查看效果必须切换到手机模式  
+PC上查看效果必须切换到**手机模式**  
 
 第一版  
 > [demo](https://fuxingzhang.github.io/ReactScrollTabBar/)  
